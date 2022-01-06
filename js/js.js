@@ -97,7 +97,7 @@ musica.play();
 			$("#jogador").css("top",topo+10);	
 
     // limita o movimentação da jogador na parte inferior do background
-			if (topo>=434) {	
+			if (topo>=520) {	
 				$("#jogador").css("top",topo-10);
 					
 			}

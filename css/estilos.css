@@ -45,7 +45,7 @@ background-image:url(../imgs/apache.png);
 	height: 66px;
 	position: absolute;
 	left: 689px;
-	top: 253px;
+	top: 510px;
 	background-image:url(../imgs/inimigo1.png);
 	
 }
@@ -55,7 +55,7 @@ background-image:url(../imgs/apache.png);
 	height: 70px;
 	position: absolute;
 	left: 775px;
-	top: 447px;
+	top: 505px;
 	background-image: url(../imgs/inimigo2.png);
 }
 
@@ -64,7 +64,7 @@ background-image:url(../imgs/apache.png);
 	height: 51px;
 	position: absolute;
 	left: 10px;
-	top: 464px;
+	top: 530px;
 	background-image:url(../imgs/amigo.png);
 }
 
