@@ -21,11 +21,11 @@ function start() { // Inicio da função start()
 	var velocidade=5;
     var posicaoY = parseInt(Math.random() * 334); //posicionamento do inimigo de forma  aleatoria 
 	var TECLA = {
-		W: 87,
-		S: 83,
-		G: 71,
-		D: 68,
-		A: 65
+		W: 87, //para cima
+		S: 83,//para baixo
+		G: 71,//tiro
+		D: 68,//para frente
+		A: 65//para tras 
 		}
 
 		var somDisparo=document.getElementById("somDisparo");
@@ -104,12 +104,51 @@ musica.play();
 					
 			}
 		}
+
+		if (jogo.pressionou[TECLA.S]) {
+			
+			var topo = parseInt($("#jogador").css("top"));
+			$("#jogador").css("top",topo+10);	
+
+    // limita o movimentação da jogador na parte inferior do background
+			if (topo>=520) {	
+				$("#jogador").css("top",topo-10);
+					
+			}
+		}
+
+		if (jogo.pressionou[TECLA.D]) {
+			
+		posicaoX = parseInt($("#jogador").css("left"));
+		$("#jogador").css("left",posicaoX+10);
+					
+		if (posicaoX>=650) {	
+			$("#jogador").css("left",posicaoX-10);
+				
+					
+			}
+		}
+
+        if (jogo.pressionou[TECLA.A]) {
+			
+			posicaoX = parseInt($("#jogador").css("left"));
+		$("#jogador").css("left",posicaoX-10);
+					
+			if (posicaoX<=0) {
+				
+			$("#jogador").css("left",posicaoX+10);
+						
+			}
+		}
+
 		
 		if (jogo.pressionou[TECLA.G]) {
 			
 			//Chama função Disparo	
 			disparo();
 		}
+
+		
 	
 		} // fim da função movejogador()
 		function moveinimigo1() {
