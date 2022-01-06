@@ -23,7 +23,9 @@ function start() { // Inicio da função start()
 	var TECLA = {
 		W: 87,
 		S: 83,
-		D: 68
+		G: 71,
+		D: 68,
+		A: 65
 		}
 
 		var somDisparo=document.getElementById("somDisparo");
@@ -103,7 +105,7 @@ musica.play();
 			}
 		}
 		
-		if (jogo.pressionou[TECLA.D]) {
+		if (jogo.pressionou[TECLA.G]) {
 			
 			//Chama função Disparo	
 			disparo();
@@ -192,7 +194,7 @@ musica.play();
 		// jogador com o inimigo1
 			
 			if (colisao1.length>0) {
-			
+				energiaAtual--;
 		   //posição atual 
 			inimigo1X = parseInt($("#inimigo1").css("left"));
 			inimigo1Y = parseInt($("#inimigo1").css("top"));
@@ -219,7 +221,7 @@ musica.play();
 		
 	if (colisao3.length>0) {
 		velocidade=velocidade+0.3;
-		energiaAtual--;
+		
 		pontos=pontos+100;
 		inimigo1X = parseInt($("#inimigo1").css("left"));
 		inimigo1Y = parseInt($("#inimigo1").css("top"));
